@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>简单的一个预加载JS | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172    $( function()&amp;#123;        var image_arr = [          &apos;/Publi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单的一个预加载JS">
+<meta property="og:url" content="http://yoursite.com/2019/08/06/font/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172    $( function()&amp;#123;        var image_arr = [          &apos;/Publi">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-10T14:18:27.230Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简单的一个预加载JS">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172    $( function()&amp;#123;        var image_arr = [          &apos;/Publi">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-font" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/06/font/" class="article-date">
+  <time datetime="2019-08-06T12:54:06.681Z" itemprop="datePublished">2019-08-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简单的一个预加载JS
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">    $( <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        var image_arr = [</span><br><span class="line">          <span class="string">'/Public/static/images/dialog_share.png'</span>,</span><br><span class="line">//            <span class="string">'/Public/static/images/cloud.png'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/dialog_wrong_bj.jpg'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/no_prize.png'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/one_crown.png'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/page_answer_bj.jpg'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/page_bj.jpg'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/page_choice.jpg'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/page_choice_hand.png'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/page_loding.jpg'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/cloud_one.png'</span>,</span><br><span class="line">//            <span class="string">'/Public/static/images/page_loding_nn.jpg'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/page_rank_bj.jpg'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/page_rank_bubble.png'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/page_rule_zj.png'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/page_tourist_bj.jpg'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/pink.png'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/speed.png'</span>,</span><br><span class="line">            <span class="string">'/Public/static/images/t  hreen_crown.png'</span> ,</span><br><span class="line">            <span class="string">'/Public/static/images/two_crown.png'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        ];</span><br><span class="line">        var loading = $(<span class="string">'.page_loading'</span>), loading_text = $(<span class="string">".loding"</span>);</span><br><span class="line">        var loading_resource = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            var resource = image_arr ;</span><br><span class="line">            var img_total = resource .length, loaded_count = 0 ;</span><br><span class="line">            var do_load = <span class="keyword">function</span> (url) &#123;</span><br><span class="line">                var img = new Image();</span><br><span class="line">                img.onload = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    ++ loaded_count;</span><br><span class="line">                    //百分比计算</span><br><span class="line">                    loading_text.text (parseInt(( loaded_count / img_total) * 100 ) + <span class="string">"%"</span>);</span><br><span class="line">                    $(<span class="string">'.progres'</span>). css(<span class="string">'width'</span> ,(loaded_count / img_total ) * 100 *0.57 + <span class="string">'%'</span>);</span><br><span class="line">                &#125;;</span><br><span class="line">                img.src = url;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">for</span> ( var i = 0; i &lt; img_total; ++ i) &#123;</span><br><span class="line">                do_load (resource [i ]);</span><br><span class="line">            &#125;</span><br><span class="line">            var check_time = 60 ;</span><br><span class="line">            var plush_page = <span class="function"><span class="title">function</span></span> () &#123;&#125;;</span><br><span class="line">            var check = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                <span class="keyword">if</span> ( 0 &gt;= check_time) &#123;</span><br><span class="line">                    <span class="keyword">if</span> ( loaded_count / img_total &gt; .5) &#123;</span><br><span class="line">                        plush_page();</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        alert(<span class="string">'加载图片失败，请返回刷新尝试!'</span> );</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    check_time -= .5;</span><br><span class="line">                    <span class="keyword">if</span> ( loaded_count == img_total ) &#123;</span><br><span class="line">                        plush_page();</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        setTimeout(check, 1000);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="built_in">return</span> <span class="keyword">function</span> (cb) &#123;</span><br><span class="line">                <span class="keyword">if</span> ( typeof(cb) == <span class="string">'function'</span>)plush_page = cb;</span><br><span class="line">                check ();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;();</span><br><span class="line">        loading_resource( <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            loading.remove();</span><br><span class="line">            $( <span class="string">'#page_home'</span>).show ();</span><br><span class="line">          window.location. href=<span class="string">'/index/home'</span></span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125; );</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/06/font/" data-id="cjz5p5k6y0001lr5ynpjmtjv5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/06/code/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          针动画代码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/06/tx/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">整理一些动效网址</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/06/tool/">常用工具</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/code/">针动画代码</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/font/">简单的一个预加载JS</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/tx/">整理一些动效网址</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
